@@ -2,12 +2,6 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import pickle
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.naive_bayes import GaussianNB
-from sklearn.svm import SVC
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.tree import DecisionTreeClassifier
 from sklearn.neural_network import MLPClassifier
 
 def main():
@@ -62,7 +56,7 @@ else:
         Age = st.sidebar.slider('Age (year)', 0, 99, 55)
         Pre_Hb = st.sidebar.slider('Preop hemoglobin(g/dL)', 1, 20, 12)
         Pre_Hct = st.sidebar.slider('Preop hematocrit (%)', 10, 65, 37)
-        Pre_PLT = st.sidebar.slider('Preop platelet count (x10^3/mcL)', 10, 1000, 301)
+        Pre_PLT = st.sidebar.slider('Preop platelet count (x10^3/mcL)', 10, 550, 301)
 
         data = {'Disease': Disease,
                 'Operation': Operation,
